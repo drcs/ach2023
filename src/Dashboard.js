@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Image from 'react-bootstrap/Image';
+import Room from './Room';
 
 const Dashboard = () => {
 
@@ -37,8 +38,12 @@ const Dashboard = () => {
         </Jumbotron>
         <Card>
             Hi there 2
-            <Image src="hayhurst.png">
-            </Image>
+            <div className="image-container">
+                <Room x="200" y="350"/>
+                <Room x="280" y="320"/>
+                <Room x="360" y="290"/>
+            <Image src="hayhurst.png" />
+            </div>
         </Card>
         <Accordion defaultActiveKey="0">
             <Card>
