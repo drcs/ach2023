@@ -3,9 +3,10 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import Image from 'react-bootstrap/Image';
 
 const Dashboard = () => {
-    
+
     return (
       <>
        <Jumbotron>
@@ -34,6 +35,11 @@ const Dashboard = () => {
             </div>
         </div>
         </Jumbotron>
+        <Card>
+            Hi there 2
+            <Image src="hayhurst.png">
+            </Image>
+        </Card>
         <Accordion defaultActiveKey="0">
             <Card>
                 <Card.Header>
