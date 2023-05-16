@@ -10,32 +10,6 @@ const Dashboard = () => {
 
     return (
       <>
-       <Jumbotron>
-        <div className="row">
-            <div className="col-md-6">
-                Name:
-            </div>
-            <div className="col-md-6">
-                First Last
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-md-6">
-                Age:
-            </div>
-            <div className="col-md-6">
-                99
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-md-6">
-                Occupation:
-            </div>
-            <div className="col-md-6">
-                blah blah blah
-            </div>
-        </div>
-        </Jumbotron>
         <Card>
             <div className="image-container">
                 <Room x="200" y="350" roomName="Eleanor Roosevelt's Room"/>
@@ -48,37 +22,25 @@ const Dashboard = () => {
             <Card>
                 <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                    Project 1
+                    Some Things To Know
                     </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="0">
-                    <Card.Body>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah
-                blah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah
-                blah blahblah blahblah blahblah blahblah blahblah blahblah blah</Card.Body>
+                    <Card.Body>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </Card.Body>
                 </Accordion.Collapse>
             </Card>
             <Card>
                 <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                    Project 2
+                    Some More Things To Know
                     </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="1">
-                    <Card.Body>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah
-                blah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah
-                blah blahblah blahblah blahblah blahblah blahblah blahblah blah</Card.Body>
-                </Accordion.Collapse>
-            </Card>
-            <Card>
-                <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey="2">
-                    Project 3
-                    </Accordion.Toggle>
-                </Card.Header>
-                <Accordion.Collapse eventKey="2">
-                    <Card.Body>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah
-                blah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blahblah
-                blah blahblah blahblah blahblah blahblah blahblah blahblah blah</Card.Body>
+                    <Card.Body>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </Card.Body>
                 </Accordion.Collapse>
             </Card>
         </Accordion>
