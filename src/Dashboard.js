@@ -37,11 +37,10 @@ const Dashboard = () => {
         </div>
         </Jumbotron>
         <Card>
-            Hi there 2
             <div className="image-container">
-                <Room x="200" y="350"/>
-                <Room x="280" y="320"/>
-                <Room x="360" y="290"/>
+                <Room x="200" y="350" roomName="Eleanor Roosevelt's Room"/>
+                <Room x="280" y="320" roomName="Winston Churchill's Room"/>
+                <Room x="360" y="290" roomName="Megan Thee Stallion's Room"/>
             <Image src="hayhurst.png" />
             </div>
         </Card>

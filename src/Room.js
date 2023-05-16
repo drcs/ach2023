@@ -14,10 +14,10 @@ function Room(props) {
       <div className="room" style={{top: props.y + "px", left: props.x + "px"}} onClick={handleShow}/>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Stuff you should know about this room</Modal.Title>
+          <Modal.Title>Stuff you should know about {props.roomName}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            Lots of air changes going on in here
+            Lots of air changes going on in {props.roomName}
         </Modal.Body>
         <Modal.Footer>
             <Button onClick={handleClose}>Turn On Purifiers</Button>
