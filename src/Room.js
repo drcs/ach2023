@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import GaugeChart from 'react-gauge-chart';
 
 function Room({room}) {
     const [show, setShow] = useState(false);
@@ -41,7 +42,10 @@ function Room({room}) {
 function ModalBody({room, phase}) {
   switch (phase) {
     case 1:
-      return <>{room.ach} air changes per hour going on in {room.name}</>;
+      return <>
+        <GaugeChart nrOfLevels={12} percent={room.ach / 12.0} textColor="#888888" formatTextValue={value => (Math.floor(value / 100.0 * 12.0 * 10.0) / 10.0) + ' ach'}/>
+        {room.ach} air changes per hour going on in {room.name}
+      </>;
     case 2:
       return <>That's a lot of air changes</>;
   }
