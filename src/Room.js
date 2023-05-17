@@ -17,7 +17,7 @@ function Room(props) {
           <Modal.Title>Stuff you should know about {props.roomName}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            Lots of air changes going on in {props.roomName}
+            {props.ach} air changes per hour going on in {props.roomName}
         </Modal.Body>
         <Modal.Footer>
             <Button onClick={handleClose}>Turn On Purifiers</Button>

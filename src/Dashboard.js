@@ -5,16 +5,16 @@ import Button from 'react-bootstrap/Button';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Image from 'react-bootstrap/Image';
 import Room from './Room';
+import roomData from './RoomData';
 
 const Dashboard = () => {
 
     return (
       <>
         <Card>
-            <div className="image-container">
-                <Room x="200" y="350" roomName="Eleanor Roosevelt's Room"/>
-                <Room x="280" y="320" roomName="Winston Churchill's Room"/>
-                <Room x="360" y="290" roomName="Megan Thee Stallion's Room"/>
+            <div className="image-container"> {
+              roomData.map(room => <Room x={room.x} y={room.y} roomName={room.name} ach={room.ach}/>)
+            }
             <Image src="hayhurst.png" />
             </div>
         </Card>
