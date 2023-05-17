@@ -25,6 +25,26 @@ const roomData = [
     x: "500",
     y: "240",
     ach: 5.6,
+}, {
+    name: "Elliot Smith's Room",
+    x: "200",
+    y: "460",
+    ach: 5.6,
+}, {
+    name: "Elvis Costello's Room",
+    x: "270",
+    y: "430",
+    ach: 5.6,
+}, {
+    name: "Hall & Oates' Room",
+    x: "340",
+    y: "400",
+    ach: 5.6,
+}, {
+    name: "Tamerlane's Room",
+    x: "410",
+    y: "370",
+    ach: 5.6,
   }
 ];
 
