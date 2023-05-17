@@ -4,14 +4,15 @@ import Modal from 'react-bootstrap/Modal';
 
 function Room({room}) {
     const [show, setShow] = useState(false);
+    const [phase, setPhase] = useState(1);
 
     const maxPhase = 2;
 
-    const [phase, setPhase] = useState(1);
-    const nextPhase = () => {
-        setPhase(phase + 1);
+    const handleNext = () => {
         if (phase >= maxPhase) {
             handleClose();
+        } else {
+            setPhase(phase + 1);
         }
     }
 
@@ -30,7 +31,7 @@ function Room({room}) {
             </Modal.Body>
             <Modal.Footer>
             <Button onClick={handleClose}>Turn On Purifiers</Button>
-            <Button onClick={nextPhase}>Next</Button>
+            <Button onClick={handleNext}>Next</Button>
         </Modal.Footer>
       </Modal>
       </>
