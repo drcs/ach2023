@@ -10,7 +10,7 @@ function Room({room}) {
     const [phase, setPhase] = useState(1);
     const nextPhase = () => {
         setPhase(phase + 1);
-        if (phase > maxPhase) {
+        if (phase >= maxPhase) {
             handleClose();
         }
     }
@@ -38,13 +38,13 @@ function Room({room}) {
     }
 
 function ModalBody({room, phase}) {
-    if (phase === 1) {
+  switch (phase) {
+    case 1:
       return <>{room.ach} air changes per hour going on in {room.name}</>;
-    } else if (phase === 2) {
+    case 2:
       return <>That's a lot of air changes</>;
-    } else {
-      return <>(the end)</>;
-    }
+  }
+  return <></>;
 }
 
 export default Room;
