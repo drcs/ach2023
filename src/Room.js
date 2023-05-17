@@ -2,24 +2,31 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-function Room(props) {
+function Room({room}) {
     const [show, setShow] = useState(false);
 
+    const maxPhase = 2;
+
     const [phase, setPhase] = useState(1);
-    const nextPhase = () => setPhase(phase + 1);
+    const nextPhase = () => {
+        setPhase(phase + 1);
+        if (phase > maxPhase) {
+            handleClose();
+        }
+    }
 
     const handleClose = () => {setShow(false); setPhase(1); }
     const handleShow = () => {setShow(true); setPhase(1); }
 
     return (
     <>
-      <div className="room" style={{top: props.y + "px", left: props.x + "px"}} onClick={handleShow}/>
+      <div className="room" style={{top: room.y + "px", left: room.x + "px"}} onClick={handleShow}/>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Stuff you should know about {props.roomName}</Modal.Title>
+          <Modal.Title>Stuff you should know about {room.name}</Modal.Title>
         </Modal.Header>
             <Modal.Body>
-                <ModalBody phase={phase} ach={props.ach} roomName={props.roomName}/>
+                <ModalBody phase={phase} room={room} />
             </Modal.Body>
             <Modal.Footer>
             <Button onClick={handleClose}>Turn On Purifiers</Button>
@@ -30,10 +37,10 @@ function Room(props) {
       );
     }
 
-function ModalBody(props) {
-    if (props.phase === 1) {
-      return <>{props.ach} air changes per hour going on in {props.roomName}</>;
-    } else if (props.phase === 2) {
+function ModalBody({room, phase}) {
+    if (phase === 1) {
+      return <>{room.ach} air changes per hour going on in {room.name}</>;
+    } else if (phase === 2) {
       return <>That's a lot of air changes</>;
     } else {
       return <>(the end)</>;

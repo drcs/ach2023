@@ -13,7 +13,7 @@ const Dashboard = () => {
       <>
         <Card>
             <div className="image-container"> {
-              roomData.map(room => <Room x={room.x} y={room.y} roomName={room.name} ach={room.ach}/>)
+              roomData.map(room => <Room room={room}/>)
             }
             <Image src="hayhurst.png" />
             </div>
